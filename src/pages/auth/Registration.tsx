@@ -79,6 +79,7 @@ const Registration = () => {
 									flexDirection: "column",
 									alignItems: "center",
 									gap: "10px",
+									my: "50px",
 							  }
 							: {
 									backgroundColor: "white",
