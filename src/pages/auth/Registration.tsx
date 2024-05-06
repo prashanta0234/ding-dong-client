@@ -1,6 +1,8 @@
 import {
+	Avatar,
 	Box,
 	Button,
+	IconButton,
 	MenuItem,
 	Paper,
 	TextField,
@@ -17,6 +19,8 @@ import {
 	RegistrationSchema,
 	RegistrationSchemaType,
 } from "../../utils/schema/auth/registrationSchema";
+import { PhotoCamera } from "@mui/icons-material";
+import { ChangeEvent, useState } from "react";
 
 const gender = [
 	{
@@ -44,6 +48,22 @@ const Registration = () => {
 		console.log(data);
 		reset();
 	};
+
+	const [avatarImage, setAvatarImage] = useState("default-avatar.jpg");
+
+	const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
+		const file = event.target.files?.[0];
+		if (file) {
+			const reader = new FileReader();
+			reader.onload = function (e) {
+				if (e.target?.result && typeof e.target.result === "string") {
+					setAvatarImage(e.target.result);
+				}
+			};
+			reader.readAsDataURL(file);
+		}
+	};
+	console.log(avatarImage);
 
 	return (
 		<>
@@ -103,6 +123,43 @@ const Registration = () => {
 					>
 						Registration
 					</Typography>
+
+					<div
+						style={{
+							position: "relative",
+							width: "150px",
+							height: "150px",
+							margin: "20px",
+						}}
+					>
+						<Avatar
+							src={avatarImage}
+							sx={{
+								width: "100%",
+								height: "100%",
+								borderRadius: "50%",
+								overflow: "hidden",
+							}}
+						/>
+						<IconButton
+							style={{
+								position: "absolute",
+								bottom: "-6%",
+								right: "-10%",
+								backgroundColor: "#fff",
+							}}
+							component="label"
+						>
+							<PhotoCamera />
+							<input
+								type="file"
+								accept="image/*"
+								onChange={handleFileChange}
+								style={{ display: "none" }}
+								// {...register("image")}
+							/>
+						</IconButton>
+					</div>
 
 					<Box
 						component="form"
