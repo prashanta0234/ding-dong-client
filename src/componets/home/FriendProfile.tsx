@@ -1,7 +1,11 @@
-import React from "react";
+import { Box } from "@mui/material";
 
 const FriendProfile = () => {
-	return <div>FriendProfile</div>;
+	return (
+		<>
+			<Box sx={{ height: "100%" }}>HI man</Box>
+		</>
+	);
 };
 
 export default FriendProfile;

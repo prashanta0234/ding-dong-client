@@ -1,6 +1,6 @@
 import { Skeleton } from "@mui/material";
 
-import { theme } from "../../utils/theme";
+import { theme } from "../../../utils/theme";
 
 const messages = [
 	{ text: "Hey, how's it going?", from: "friend" },
@@ -10,8 +10,6 @@ const messages = [
 ];
 
 const ChatSkeleton = () => {
-	// const classes = useStyles();
-
 	return (
 		<div>
 			{messages.map((message, index) => (

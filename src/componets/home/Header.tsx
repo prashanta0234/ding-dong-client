@@ -48,7 +48,7 @@ const Header = () => {
 					>
 						<MenuIcon />
 					</IconButton>
-					<Box sx={{ gap: "20px", display: "flex" }}>
+					<Box sx={{ gap: { xs: "1vw", sm: "2vw" }, display: "flex" }}>
 						<Tooltip title="Search">
 							<IconButton>
 								<SearchIcon />

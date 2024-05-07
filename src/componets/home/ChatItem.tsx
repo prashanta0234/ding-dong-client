@@ -58,7 +58,7 @@ const ChatItem = ({
 					}}
 				>
 					<IconButton>
-						<MoreVert sx={{ height: "15px" }} />
+						<MoreVert sx={{ height: "15px", width: "15px" }} />
 					</IconButton>
 					<Box
 						sx={{

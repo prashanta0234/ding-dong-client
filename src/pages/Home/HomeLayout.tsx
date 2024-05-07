@@ -9,7 +9,7 @@ const HomeLayout = ({ children }: { children: ReactNode }) => {
 			<Box
 				sx={{
 					backgroundColor: theme.palette.secondary.main,
-					maxHeight: "100vh",
+					minHeight: "100vh",
 					margin: 0,
 				}}
 			>
