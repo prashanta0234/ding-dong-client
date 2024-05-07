@@ -1,4 +1,5 @@
 import { CircularProgress } from "@mui/material";
+import { theme } from "../../utils/theme";
 
 const Loader = () => {
 	return (
@@ -6,9 +7,10 @@ const Loader = () => {
 			style={{
 				display: "flex",
 				width: "100vw",
-				height: "90vh",
+				height: "100vh",
 				justifyContent: "center",
 				alignItems: "center",
+				backgroundColor: theme.palette.secondary.main,
 			}}
 		>
 			<svg width={0} height={0}>
