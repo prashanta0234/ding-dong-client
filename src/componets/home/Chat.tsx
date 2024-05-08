@@ -63,7 +63,7 @@ const Chat = () => {
 					</Tooltip>
 				</Box>
 			</Grid>
-			<Grid item sx={{ overflow: "auto" }} xs={8}>
+			<Grid item sx={{ overflow: "auto" }} xs={9}>
 				<Chats />
 			</Grid>
 
